@@ -10,7 +10,7 @@ namespace ConsoleApp1.bag
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             { 
-                optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;AttachDbFilename=C:\\Cool_DB\\Database.mdf;Database=MyDatabase;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;AttachDbFilename=C:\\Cool_BD\\Database.mdf;Database=MyDatabase;Trusted_Connection=True;");
             }
         }
     }

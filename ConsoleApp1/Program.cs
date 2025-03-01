@@ -31,6 +31,7 @@ namespace ConsoleApp1
                 ShiftNumber = 2
             };
 
+
             //var name= guest?.Name?.ToArray();
 
             if(guest.Name != null)
