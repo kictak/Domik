@@ -9,5 +9,7 @@
         public int AvailableSeats { get; set; }
         public int TotalSeats { get; set; }
 
+        public ICollection<Stuff> Stuffs { get; set; } = new List<Stuff>();
+
     }
 }

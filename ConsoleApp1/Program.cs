@@ -42,7 +42,7 @@ namespace ConsoleApp1
             Console.WriteLine((guest.Name??"").Length);
 
             var length = guest.Name?.Length ?? 0;
-
+            
 
         }
     }

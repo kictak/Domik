@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Text.RegularExpressions;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ConsoleApp1.bag
 {
@@ -14,5 +15,6 @@ namespace ConsoleApp1.bag
         public required string DocumentType { get; set; }
         public required string DocumentNumber { get; set; }
         public required int RoomNumber { get; set; }
+
     }
 }
