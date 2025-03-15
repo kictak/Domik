@@ -84,7 +84,7 @@ namespace ConsoleApp1
             {
                 var genderCount = DbContext.Genders.Count();
                 var newGender = DbContext.Genders.FirstOrDefault();
-                if (genderCount == null)
+                if (genderCount == 0)
                 {
                     context.Genders.Add(new Gender() //добавление нового гендера
                     {
