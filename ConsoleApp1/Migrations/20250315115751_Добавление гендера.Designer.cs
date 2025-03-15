@@ -4,6 +4,7 @@ using ConsoleApp1.bag;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ConsoleApp1.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250315115751_Добавление гендера")]
+    partial class Добавлениегендера
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,7 +39,7 @@ namespace ConsoleApp1.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Genders", (string)null);
+                    b.ToTable("Genders");
                 });
 
             modelBuilder.Entity("ConsoleApp1.Smallbag.CheckIn", b =>
@@ -65,7 +68,7 @@ namespace ConsoleApp1.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("CheckIn", (string)null);
+                    b.ToTable("CheckIn");
                 });
 
             modelBuilder.Entity("ConsoleApp1.Smallbag.DocumentType", b =>
@@ -82,7 +85,7 @@ namespace ConsoleApp1.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("DocumentType", (string)null);
+                    b.ToTable("DocumentType");
                 });
 
             modelBuilder.Entity("ConsoleApp1.Smallbag.RoomType", b =>
@@ -102,7 +105,7 @@ namespace ConsoleApp1.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("RoomType", (string)null);
+                    b.ToTable("RoomType");
                 });
 
             modelBuilder.Entity("ConsoleApp1.bag.Guest", b =>
@@ -149,7 +152,7 @@ namespace ConsoleApp1.Migrations
 
                     b.HasIndex("GenderId");
 
-                    b.ToTable("Guests", (string)null);
+                    b.ToTable("Guests");
                 });
 
             modelBuilder.Entity("ConsoleApp1.bag.Room", b =>
@@ -173,7 +176,7 @@ namespace ConsoleApp1.Migrations
 
                     b.HasIndex("RoomTypeid");
 
-                    b.ToTable("Rooms", (string)null);
+                    b.ToTable("Rooms");
                 });
 
             modelBuilder.Entity("ConsoleApp1.bag.Stuff", b =>
@@ -203,7 +206,7 @@ namespace ConsoleApp1.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Stuffs", (string)null);
+                    b.ToTable("Stuffs");
                 });
 
             modelBuilder.Entity("RoomStuff", b =>
@@ -218,7 +221,7 @@ namespace ConsoleApp1.Migrations
 
                     b.HasIndex("StuffsId");
 
-                    b.ToTable("RoomStuff", (string)null);
+                    b.ToTable("RoomStuff");
                 });
 
             modelBuilder.Entity("ConsoleApp1.Smallbag.CheckIn", b =>
