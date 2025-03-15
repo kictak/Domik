@@ -11,10 +11,10 @@ namespace ConsoleApp1.bag
         public string? MiddleName { get; set; }
         public required string LastName { get; set; }
         //todo: gender не строка
-        public required Gender Gender { get; set; }
+        public Gender Gender { get; set; }
         public string? Adress { get; set; }
         public required DateOnly DateOfBirth { get; set; }
-        public required DocumentType DocumentType{ get; set; }
+        public DocumentType DocumentType{ get; set; }
         //public int DocumentTypeId { get; set; }
         public required string DocumentNumber { get; set; }
         public required int RoomNumber { get; set; }

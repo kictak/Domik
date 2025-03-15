@@ -9,16 +9,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //var guest = new Guest()
-            //{
-            //    Name = "Stepan",
-            //    LastName = "Tramp",
-            //    GenderId = 1,
-            //    Adress = "Pushino 36,kv 30",
-            //    DateOfBirth = new DateOnly (2201,01,01),
-            //    DocumentNumber = "7777",
-            //    RoomNumber = 42,                
-            //};
+            var documentTYPE = new DocumentType()
+            {
+                DocumentName = "tst"
+            };
+            var guest = new Guest()
+            {
+                Name = "Stepan",
+                LastName = "Tramp",
+                GenderId = 1,
+                Adress = "Pushino 36,kv 30",
+                DateOfBirth = new DateOnly(2201, 01, 01),
+                DocumentNumber = "7777",
+                DocumentType = documentTYPE,
+                RoomNumber = 42
+            };
+            MyDbContext context = new MyDbContext();
+            context.Guests.Add(guest);
+            context.SaveChanges();
 
             //var gender = new Gender()
             //{
@@ -55,8 +63,6 @@ namespace ConsoleApp1
             //Console.WriteLine((guest.Name??"").Length);
 
             //var length = guest.Name?.Length ?? 0;
-
-            MyDbContext context = new MyDbContext();
 
 
             /*context.Guests.Add(new Guest() //добавление нового гостя
