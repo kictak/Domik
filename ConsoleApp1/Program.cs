@@ -1,4 +1,6 @@
 ﻿using ConsoleApp1.bag;
+using ConsoleApp1.Small;
+using ConsoleApp1.Smallbag;
 
 namespace ConsoleApp1
 {
@@ -10,18 +12,26 @@ namespace ConsoleApp1
             {
                 Name = "Stepan",
                 LastName = "Tramp",
-                Gender = "Male",
                 Adress = "Pushino 36,kv 30",
                 DateOfBirth = new DateOnly (2201,01,01),
                 DocumentNumber = "7777",
-                DocumentType = "passport",
                 RoomNumber = 42,                
+            };
+
+            var gender = new Gender()
+            {
+                Name = "male"
             };
 
             var room = new Room()
             {
-                RoomType = "Luxe",
-                Coast = 10234
+                DayPrice = 10234
+            };
+
+            var roomtype = new RoomType()
+            {
+                Type = "Luxe",
+                Places = 2
             };
 
             var stuff = new Stuff() 
@@ -42,8 +52,30 @@ namespace ConsoleApp1
             Console.WriteLine((guest.Name??"").Length);
 
             var length = guest.Name?.Length ?? 0;
-            
 
+            MyDbContext context = new MyDbContext();
+
+
+            /*context.Guests.Add(new Guest() //добавление нового гостя
+
+            {
+                Name = "Stepan",
+                LastName = "Polyakov",
+                Gender = "Male",
+                DateOfBirth = new DateOnly(2000, 01, 02),
+                DocumentType = "Passport",
+                DocumentNumber = "31256661",
+                RoomNumber = 42,
+            });
+            */
+
+            context.Stuffs.Add(new Stuff() //добавление нового гостя
+
+            {
+                Name = "Stepan",
+                LastName = "Polyakov",
+                ShiftNumber = 42
+            });
         }
     }
 }
