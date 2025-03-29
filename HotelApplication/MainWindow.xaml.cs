@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using HotelApplication.Forms;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,6 +21,19 @@ namespace HotelApplication
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ShowRooms_Click(object sender, RoutedEventArgs e)
+        {
+            RoomListForm roomListForm = new RoomListForm();
+            roomListForm.ShowDialog();
+        }
+
+
 
         //private void Button_Click(object sender, RoutedEventArgs e)
         //{
