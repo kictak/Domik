@@ -1,6 +1,6 @@
-﻿namespace ConsoleApp1.Smallbag
+﻿namespace DataModel.Directories
 {
-    internal class ShiftStuff
+    public class ShiftStuff
     {
         public int Id { get; set; }
 

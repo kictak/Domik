@@ -1,6 +1,6 @@
-﻿namespace ConsoleApp1.Smallbag
+﻿namespace DataModel.Directories
 {
-    internal class RoomType
+    public class RoomType
     {
         public int Id {  get; set; }
 

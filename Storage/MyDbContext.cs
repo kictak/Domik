@@ -1,9 +1,10 @@
-﻿using ConsoleApp1.Small;
+﻿using DataModel.Directories;
+using DataModel.Object;
 using Microsoft.EntityFrameworkCore;
 
-namespace ConsoleApp1.bag
+namespace Storage
 {
-    class MyDbContext : DbContext
+    public class MyDbContext : DbContext
     {
         public DbSet<Stuff> Stuffs { get; set; }
         public DbSet<Room> Rooms { get; set; }

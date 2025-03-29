@@ -1,10 +1,6 @@
-﻿using ConsoleApp1.Small;
-using ConsoleApp1.Smallbag;
-using System.Text.RegularExpressions;
-
-namespace ConsoleApp1.bag
+﻿namespace DataModel.Directories
 {
-    internal class Guest
+    public class Guest
     {
         public int Id { get; set; }
         public required string Name { get; set; }

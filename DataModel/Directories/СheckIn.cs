@@ -1,8 +1,6 @@
-﻿using ConsoleApp1.bag;
-
-namespace ConsoleApp1.Smallbag
+﻿namespace DataModel.Directories
 {
-    internal class CheckIn
+    public class CheckIn
     {
         public int Id {  get; set; }
         public DateOnly Enter {  get; set; }

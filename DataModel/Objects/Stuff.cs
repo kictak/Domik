@@ -1,7 +1,6 @@
-﻿
-namespace ConsoleApp1.bag
+﻿namespace DataModel.Object
 {
-    internal class Stuff
+    public class Stuff
     {
         public int Id { get; set; }
         public int Age { get; set; }

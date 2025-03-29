@@ -1,8 +1,8 @@
-﻿using ConsoleApp1.Smallbag;
+﻿using DataModel.Directories;
 
-namespace ConsoleApp1.bag
+namespace DataModel.Object
 {
-    internal class Room
+    public class Room
     {
         public int Id { get; set; }
         public int Number { get; set; }

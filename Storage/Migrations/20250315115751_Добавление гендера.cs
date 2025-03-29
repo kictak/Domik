@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ConsoleApp1.Migrations
+namespace Storage.Migrations
 {
     /// <inheritdoc />
     public partial class Добавлениегендера : Migration

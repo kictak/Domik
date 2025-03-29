@@ -1,8 +1,6 @@
-﻿using ConsoleApp1.bag;
-
-namespace ConsoleApp1.Small
+﻿namespace DataModel.Directories
 {
-    internal class Gender
+    public class Gender
     {
         public int Id {  get; set; }
         public required string Name { get; set; }
