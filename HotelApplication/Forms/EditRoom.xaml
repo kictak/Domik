@@ -5,7 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelApplication.Forms"
         mc:Ignorable="d"
-        Title="EditRoom" Height="150" Width="400">
+        Title="EditRoom" Height="172" Width="400">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
     <DockPanel>
         <Grid DockPanel.Dock="Bottom" Height="40">
             <Grid.ColumnDefinitions>
@@ -15,8 +21,6 @@
             <Button Grid.Column="0" Content="Сохранить" Margin="5.5"/>
             <Button Grid.Column="1" Content="Выйти" Margin="5.5"/>
         </Grid>
-        <!--<Button  DockPanel.Dock="Bottom"  Height="40">1</Button>
-        <Button  DockPanel.Dock="Right" Height="40">1</Button>-->
         <Grid DockPanel.Dock="Top" Height="100">
             <Grid.RowDefinitions>
                 <RowDefinition Height="10*"/>
@@ -24,15 +28,21 @@
                 <RowDefinition Height="10*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="300*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Номер" VerticalAlignment="Center" Height="34" Width="100"/>
-            <TextBlock HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="Тип комнаты" VerticalAlignment="Center" Height="32" Width="100"/>
-            <TextBlock HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="Цена комнаты" VerticalAlignment="Center" Height="33" Width="100"/>
-            <ComboBox Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="300" Height="34"/>
-            <TextBox Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="300" Height="35"/>
-            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="302" Height="35" Grid.Row="2" Grid.Column="1"/>
+            
+            <TextBlock  Text="Номер"/>
+           
+            <TextBlock Grid.Row="1" Text="Тип комнаты"/>
+            
+            <TextBlock Grid.Row="2" Text="Цена комнаты"/>
+            
+            <ComboBox Grid.Column="1" Grid.Row="1"/>
+            
+            <TextBox Grid.Column="1" Text="TextBox"/>
+            
+            <TextBox  Text="TextBox" Grid.Row="2" Grid.Column="1"/>
         </Grid>
     </DockPanel>
 </Window>
