@@ -38,11 +38,11 @@
             
             <TextBlock Grid.Row="2" Text="Цена комнаты"/>
             
-            <ComboBox Grid.Column="1" Grid.Row="1"/>
-            
-            <TextBox Grid.Column="1" Text="TextBox"/>
-            
-            <TextBox  Text="TextBox" Grid.Row="2" Grid.Column="1"/>
+            <TextBox Grid.Column="1" Text="{Binding Number}" />
+
+            <ComboBox Grid.Column="1" Grid.Row="1" x:Name="cbRoomTypes" SelectedItem="{Binding RoomType}" DisplayMemberPath="Name"  d:ItemsSource="{d:SampleData ItemCount=2}"/>
+
+            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding DayPrice}" TextChanged="TextBox_TextChanged_1" />
         </Grid>
     </DockPanel>
 </Window>

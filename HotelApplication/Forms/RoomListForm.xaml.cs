@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DataModel.Directories;
+using Microsoft.EntityFrameworkCore;
+using Storage;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,22 +27,35 @@ namespace HotelApplication.Forms
             InitializeComponent();
         }
 
+        private  void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            using (var context = new MyDbContext())
+            {
+                var rooms = context.Rooms
+                    .Include(r => r.RoomType)
+                    .ToArray();
+
+                dgRooms.ItemsSource = rooms;
+            }
+        }
+
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
-        private void ShowRooEdit_Click(object sender, RoutedEventArgs e)
+        private void ShowRoomEdit_Click(object sender, RoutedEventArgs e)
         {
-            EditRoom editRoom = new EditRoom();
-            editRoom.ShowDialog();
+            EditRoom editroom = new EditRoom();
+            editroom.ShowDialog();
         }
 
         private void AddRoom_Click(object sender, RoutedEventArgs e)
         {
-            AddRoom addRoom = new AddRoom(); 
-            addRoom.ShowDialog();            
+            AddRoom addRoom = new AddRoom();
+            addRoom.ShowDialog();
         }
+
 
         //RoomListForm roomListForm = new RoomListForm();
         //roomListForm.ShowDialog();

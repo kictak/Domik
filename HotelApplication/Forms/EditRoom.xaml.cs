@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DataModel.Directories;
+using DataModel.Object;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace HotelApplication.Forms
 {
@@ -19,9 +9,44 @@ namespace HotelApplication.Forms
     /// </summary>
     public partial class EditRoom : Window
     {
+        Room room = new Room()
+        {
+            Number = 42,
+            DayPrice = 100
+        };
+
+        RoomType[] RoomTypes = new RoomType[]
+        {
+            new RoomType
+            {
+                Id = 1,
+                Type = "Стандарт",
+                Places = 2,
+
+            },
+            new RoomType
+            {
+                Id = 2,
+                Type = "Люкс",
+                Places = 1,
+            }
+        };
+
         public EditRoom()
         {
             InitializeComponent();
+            DataContext = room;
+            cbRoomTypes.ItemsSource = RoomTypes;
+        }
+
+        private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_1(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
         }
     }
 }

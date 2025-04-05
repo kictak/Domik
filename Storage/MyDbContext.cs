@@ -10,7 +10,7 @@ namespace Storage
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Guest> Guests{ get; set; }
         public DbSet<Gender> Genders { get; set; }
-        public DbSet<Gender> DocumentTypes { get; set; }
+        public DbSet<DocumentType> DocumentTypes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             { 
