@@ -12,3 +12,6 @@
         public ICollection<Room> Rooms { get; set; } = new List<Room>();
     }
 }
+
+//TODOO: СОЗДАТЬ ФОРМЫ ДЛЯ ГОСТЕЙ
+//TODOO: Создать форму для сотрудников
