@@ -1,5 +1,6 @@
 ﻿using DataModel.Directories;
 using DataModel.Object;
+using Microsoft.EntityFrameworkCore;
 using Storage;
 using System.Text.RegularExpressions;
 
@@ -9,7 +10,11 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+
             MyDbContext context = new MyDbContext();
+            context.Database.Migrate();
+            return;
+
             var documentTYPE = new DocumentType()
             {
                 DocumentName = "tst"

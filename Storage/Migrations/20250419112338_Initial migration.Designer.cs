@@ -12,8 +12,8 @@ using Storage;
 namespace Storage.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20250405104343_removed room_number from guests")]
-    partial class removedroom_numberfromguests
+    [Migration("20250419112338_Initial migration")]
+    partial class Initialmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -68,7 +68,7 @@ namespace Storage.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("DocumentType");
+                    b.ToTable("DocumentTypes");
                 });
 
             modelBuilder.Entity("DataModel.Directories.Gender", b =>
@@ -85,7 +85,7 @@ namespace Storage.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Gender");
+                    b.ToTable("Genders");
                 });
 
             modelBuilder.Entity("DataModel.Directories.Guest", b =>

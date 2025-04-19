@@ -32,7 +32,13 @@ namespace HotelApplication
             RoomListForm roomListForm = new RoomListForm();
             roomListForm.ShowDialog();
         }
+        private void ShowGuest_Click(object sender, RoutedEventArgs e)
+        {
+            GuestForm guestListForm = new GuestForm();
+            guestListForm.ShowDialog();
+        }
 
+        
 
 
         //private void Button_Click(object sender, RoutedEventArgs e)
