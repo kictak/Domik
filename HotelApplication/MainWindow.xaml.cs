@@ -1,4 +1,6 @@
 ﻿using HotelApplication.Forms;
+using HotelApplication.Forms.RoomForm;
+using HotelApplication.Forms.GuestForm;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -34,7 +36,7 @@ namespace HotelApplication
         }
         private void ShowGuest_Click(object sender, RoutedEventArgs e)
         {
-            GuestForm guestListForm = new GuestForm();
+            GuestsListForm guestListForm = new GuestsListForm();
             guestListForm.ShowDialog();
         }
 

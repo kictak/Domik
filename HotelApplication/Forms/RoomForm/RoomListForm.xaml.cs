@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace HotelApplication.Forms
+namespace HotelApplication.Forms.RoomForm
 {
     /// <summary>
     /// Логика взаимодействия для RoomListForm.xaml

@@ -1,4 +1,6 @@
-﻿namespace DataModel.Directories
+﻿using DataModel.Object;
+
+namespace DataModel.Directories
 {
     public class CheckIn
     {
@@ -6,7 +8,9 @@
         public DateOnly Enter {  get; set; }
         public DateOnly Exit { get; set; }
         public int GuestId { get; set; }
-        // Навигационное свойство для группы
+        public int RoomId { get; set; }
+        // Навигационное свойство для гостей 
         public required Guest Guest { get; set; }
+        public required Room Room { get; set; }
     }
 }

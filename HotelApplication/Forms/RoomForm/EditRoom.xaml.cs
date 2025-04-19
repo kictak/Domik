@@ -2,7 +2,7 @@
 using DataModel.Object;
 using System.Windows;
 
-namespace HotelApplication.Forms
+namespace HotelApplication.Forms.RoomForm
 {
     /// <summary>
     /// Логика взаимодействия для EditRoom.xaml

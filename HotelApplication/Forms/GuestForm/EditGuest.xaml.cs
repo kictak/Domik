@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace HotelApplication.Forms
+namespace HotelApplication.Forms.GuestForm
 {
     /// <summary>
-    /// Логика взаимодействия для AddRoom.xaml
+    /// Логика взаимодействия для EditGuest.xaml
     /// </summary>
-    public partial class AddRoom : Window
+    public partial class EditGuest : Window
     {
-        public AddRoom()
+        public EditGuest()
         {
             InitializeComponent();
         }

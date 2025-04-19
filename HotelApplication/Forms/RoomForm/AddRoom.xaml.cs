@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace HotelApplication.Forms
+namespace HotelApplication.Forms.RoomForm
 {
     /// <summary>
-    /// Логика взаимодействия для GuestForm.xaml
+    /// Логика взаимодействия для AddRoom.xaml
     /// </summary>
-    public partial class GuestForm : Window
+    public partial class AddRoom : Window
     {
-        public GuestForm()
+        public AddRoom()
         {
             InitializeComponent();
         }
     }
-
-    private void ShowRoomEdit_Click(object sender, RoutedEventArgs e)
-    {
-        EditRoom editroom = new EditRoom();
-        editroom.ShowDialog();
-    }
+}

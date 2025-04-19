@@ -1,0 +1,34 @@
+﻿<Window x:Class="HotelApplication.Forms.GuestForm.GuestsListForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelApplication.Forms.GuestForm"
+        xmlns:vm="clr-namespace:ViewModel;assembly=ViewModel"
+        mc:Ignorable="d"
+        Title="GuestForm" Height="500" Width="600"
+        d:DataContext="{d:DesignInstance vm:CurrentGuestListViewModel, IsDesignTimeCreatable=True}"
+        >
+    <DockPanel>
+        <DataGrid DockPanel.Dock="Top" Height="400" ItemsSource="{Binding Path=CheckIns}" d:ItemsSource="{d:SampleData ItemCount=5 }"
+                  Margin="10" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Path=Guest.Name}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Path=Guest.MiddleName}"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Path=Guest.LastName}"/>
+                <DataGridTextColumn Header="Номер Проживания" Binding="{Binding Path=Room.Number}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Изменить" Margin="10" />
+            <Button Grid.Column="1" Content="Добавить" Margin="10" />
+            <Button Grid.Column="2" Content="Удалить" Margin="10"/>
+        </Grid>
+
+    </DockPanel>
+</Window>
