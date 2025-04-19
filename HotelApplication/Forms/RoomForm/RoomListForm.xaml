@@ -4,18 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelApplication.Forms.RoomForm"
+        xmlns:vm="clr-namespace:ViewModel.RoomViewModel;assembly=ViewModel"
         mc:Ignorable="d"
+        
         Title="RoomListForm" Height="500" Width="600"
         Loaded="Window_Loaded"
-        >
+        d:DataContext="{d:DesignInstance vm:RoomListViewModel, IsDesignTimeCreatable=True}">
 
     <DockPanel >
 
-        <DataGrid x:Name="dgRooms" DockPanel.Dock="Top" Height="400" d:ItemsSource="{d:SampleData ItemCount=5}"  Margin="10" AutoGenerateColumns="False">
+        <DataGrid  DockPanel.Dock="Top" Height="400" ItemsSource="{Binding Path=Rooms}" d:ItemsSource="{d:SampleData ItemCount=5}"  Margin="10" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="номер комнаты" Binding="{Binding Number}"/>
-                <DataGridTextColumn Header="тип комнаты" Binding="{Binding RoomType.Description}"/><!--Discription надо для составных объектов-->
-                <DataGridTextColumn Header="цена комнаты за день" Binding="{Binding DayPrice}"/>
+                <DataGridTextColumn Header="номер комнаты" Binding="{Binding Path=Number}"/>
+                <DataGridTextColumn Header="тип комнаты" Binding="{Binding Path=RoomType}"/><!--Discription надо для составных объектов-->
+                <DataGridTextColumn Header="цена комнаты за день" Binding="{Binding Path=DayPrice}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Grid>

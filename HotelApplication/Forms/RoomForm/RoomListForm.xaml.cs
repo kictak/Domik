@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ViewModel.RoomViewModel;
 
 namespace HotelApplication.Forms.RoomForm
 {
@@ -25,18 +26,7 @@ namespace HotelApplication.Forms.RoomForm
         public RoomListForm()
         {
             InitializeComponent();
-        }
-
-        private  void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            using (var context = new MyDbContext())
-            {
-                var rooms = context.Rooms
-                    .Include(r => r.RoomType)
-                    .ToArray();
-
-                dgRooms.ItemsSource = rooms;
-            }
+            DataContext = new RoomListViewModel();
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)

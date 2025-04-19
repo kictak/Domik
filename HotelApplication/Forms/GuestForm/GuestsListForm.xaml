@@ -4,11 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelApplication.Forms.GuestForm"
-        xmlns:vm="clr-namespace:ViewModel;assembly=ViewModel"
+        xmlns:vm="clr-namespace:ViewModel.GuestViewModel;assembly=ViewModel"
         mc:Ignorable="d"
         Title="GuestForm" Height="500" Width="600"
-        d:DataContext="{d:DesignInstance vm:CurrentGuestListViewModel, IsDesignTimeCreatable=True}"
-        >
+        d:DataContext="{d:DesignInstance vm:CurrentGuestListViewModel, IsDesignTimeCreatable=True}">
     <DockPanel>
         <DataGrid DockPanel.Dock="Top" Height="400" ItemsSource="{Binding Path=CheckIns}" d:ItemsSource="{d:SampleData ItemCount=5 }"
                   Margin="10" AutoGenerateColumns="False" >
