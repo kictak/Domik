@@ -15,15 +15,16 @@ namespace Storage
         public DbSet<DocumentType> DocumentTypes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var fileInfo = new FileInfo(databaseFilePath);
+            //var fileInfo = new FileInfo(databaseFilePath);
 
-            if (fileInfo.DirectoryName != null)
-            {
-                Directory.CreateDirectory(fileInfo.DirectoryName);
-            }
+            //if (fileInfo.DirectoryName != null)
+            //{
+            //    Directory.CreateDirectory(fileInfo.DirectoryName);
+            //}
 
             //optionsBuilder.UseSqlServer($"Server=(localdb)\\MSSQLLocalDB;AttachDbFilename={databaseFilePath};Database=MyDatabase3;Trusted_Connection=True;");
-            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=Hotels2;Trusted_Connection=True;TrustServerCertificate=True");
+
+            optionsBuilder.UseSqlServer(@"Server=.;Database=Hotels2;Trusted_Connection=True;TrustServerCertificate=True");
 
         }
     }

@@ -8,7 +8,6 @@
         mc:Ignorable="d"
         
         Title="RoomListForm" Height="500" Width="600"
-        Loaded="Window_Loaded"
         d:DataContext="{d:DesignInstance vm:RoomListViewModel, IsDesignTimeCreatable=True}">
 
     <DockPanel >
