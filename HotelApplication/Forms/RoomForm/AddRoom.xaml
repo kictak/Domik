@@ -5,20 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelApplication.Forms.RoomForm"
         mc:Ignorable="d"
-        Title="AddRoom" Height="360" Width="541">
+        Title="AddRoom" 
+        Height="360" 
+        Width="541">
     <DockPanel>
+        
         <Grid DockPanel.Dock="Top">
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions> 
         </Grid>
+        
         <Grid DockPanel.Dock="Bottom">
+            
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Content="Сохранить" Margin="5"/>
-            <Button Content="Отмеменить" Grid.Column="1" Margin="5"/>
+            
+            <Button Content="Сохранить" 
+                    Margin="5"/>
+            <Button Content="Отмеменить" 
+                    Grid.Column="1" 
+                    Margin="5"/>
         </Grid>
     </DockPanel>
 </Window>
