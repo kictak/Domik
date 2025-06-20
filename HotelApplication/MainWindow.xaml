@@ -1,13 +1,12 @@
 ﻿<Window x:Class="HotelApplication.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HotelApplication"
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="500">
     <Grid ShowGridLines="True">
-
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Content="Экспорт в Excel" Click="ExportToExcel_Click" Panel.ZIndex="1" />
         <Menu>
             <MenuItem Header="список комнат" Click="ShowRooms_Click" />
             <MenuItem Header="гости">

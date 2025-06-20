@@ -1,6 +1,5 @@
 ﻿using DataModel.Object;
 using Storage;
-using System.Linq;
 using System.Windows;
 
 namespace HotelApplication.Forms.RoomForm
