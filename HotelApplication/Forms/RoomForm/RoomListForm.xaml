@@ -6,17 +6,24 @@
         xmlns:local="clr-namespace:HotelApplication.Forms.RoomForm"
         xmlns:vm="clr-namespace:ViewModel.RoomViewModel;assembly=ViewModel"
         mc:Ignorable="d"
-        
+
         Title="RoomListForm" Height="500" Width="600"
         d:DataContext="{d:DesignInstance vm:RoomListViewModel, IsDesignTimeCreatable=True}">
 
-    <DockPanel >
+    <DockPanel>
 
-        <DataGrid  DockPanel.Dock="Top" Height="400" ItemsSource="{Binding Path=Rooms}" d:ItemsSource="{d:SampleData ItemCount=5}"  Margin="10" AutoGenerateColumns="False">
+        <DataGrid x:Name="dataGrid"
+          DockPanel.Dock="Top"
+          Height="400"
+          ItemsSource="{Binding Path=Rooms}"
+          AutoGenerateColumns="False"
+          MouseDoubleClick="DataGrid_MouseDoubleClick"
+          Margin="10">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="номер комнаты" Binding="{Binding Path=Number}"/>
-                <DataGridTextColumn Header="тип комнаты" Binding="{Binding Path=RoomType}"/><!--Discription надо для составных объектов-->
-                <DataGridTextColumn Header="цена комнаты за день" Binding="{Binding Path=DayPrice}"/>
+                <DataGridTextColumn Header="номер комнаты" Binding="{Binding Path=Number}" />
+                <DataGridTextColumn Header="тип комнаты" Binding="{Binding Path=RoomType.Type}" />
+                <DataGridTextColumn Header="цена комнаты за день" Binding="{Binding Path=DayPrice}" />
+                <DataGridTextColumn Header="статус" Binding="{Binding Path=Status}" />
             </DataGrid.Columns>
         </DataGrid>
         <Grid>
@@ -25,11 +32,9 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="Изменить" Margin="10" Click="ShowRoomEdit_Click"/>
-            <Button Grid.Column="1" Content="Добавить" Margin="10" Click="AddRoom_Click"/>
-            <Button Grid.Column="2" Content="Удалить" Margin="10"/>
+            <Button Grid.Column="0" Content="Изменить" Margin="10" Click="ShowRoomEdit_Click" />
+            <Button Grid.Column="1" Content="Добавить" Margin="10" Click="AddRoom_Click" />
+            <Button Grid.Column="2" Content="Удалить" Margin="10" />
         </Grid>
-
     </DockPanel>
-
 </Window>

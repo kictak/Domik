@@ -9,12 +9,10 @@
     <Grid ShowGridLines="True">
 
         <Menu>
-            <MenuItem Header="список комнат" Click="ShowRooms_Click"/>
+            <MenuItem Header="список комнат" Click="ShowRooms_Click" />
             <MenuItem Header="гости">
-                <MenuItem Header="Показать Гостей" Click="ShowGuest_Click"/>
+                <MenuItem Header="Показать Гостей" Click="ShowGuest_Click" />
             </MenuItem>
         </Menu>
-
-  
     </Grid>
 </Window>

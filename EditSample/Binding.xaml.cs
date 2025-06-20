@@ -1,17 +1,5 @@
 ﻿using EditSample.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace EditSample
 {
@@ -20,7 +8,7 @@ namespace EditSample
     /// </summary>
     public partial class Binding : Window
     {
-        Student student = new Student()
+        private Student student = new Student()
         {
             Age = 20,
             FirstName = "Петя",
@@ -28,7 +16,7 @@ namespace EditSample
             Id = 1,
         };
 
-        Group[] Groups =
+        private Group[] Groups =
             new Group[]
             {
                 new Group {
@@ -41,7 +29,6 @@ namespace EditSample
                 }
             };
 
-
         public Binding()
         {
             InitializeComponent();
@@ -53,7 +40,6 @@ namespace EditSample
         private void ShowInfo_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show($"Поля студента: {student.LastName} {student.FirstName}, возраст: {student.Age}, группа: {student.Group?.Name}");
-
         }
     }
 }

@@ -1,33 +1,23 @@
 ﻿<Window x:Class="HotelApplication.Forms.RoomForm.AddRoom"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HotelApplication.Forms.RoomForm"
-        mc:Ignorable="d"
-        Title="AddRoom" 
-        Height="360" 
-        Width="541">
+        Title="Добавить комнату"
+        Height="250" Width="400">
     <DockPanel>
-        
-        <Grid DockPanel.Dock="Top">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-            </Grid.RowDefinitions> 
-        </Grid>
-        
-        <Grid DockPanel.Dock="Bottom">
-            
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            
-            <Button Content="Сохранить" 
-                    Margin="5"/>
-            <Button Content="Отмеменить" 
-                    Grid.Column="1" 
-                    Margin="5"/>
-        </Grid>
+        <StackPanel Margin="10" DockPanel.Dock="Top">
+            <TextBlock Text="Номер комнаты" Margin="0,5" />
+            <TextBox x:Name="tbNumber" />
+
+            <TextBlock Text="Тип комнаты" Margin="0,10,0,5" />
+            <ComboBox x:Name="cbRoomTypes" DisplayMemberPath="Type" />
+
+            <TextBlock Text="Цена за день" Margin="0,10,0,5" />
+            <TextBox x:Name="tbDayPrice" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10" DockPanel.Dock="Bottom">
+            <Button Content="Сохранить" Width="80" Margin="5" Click="Save_Click" />
+            <Button Content="Отменить" Width="80" Margin="5" Click="Cancel_Click" />
+        </StackPanel>
     </DockPanel>
 </Window>

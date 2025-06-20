@@ -5,72 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelApplication.Forms.RoomForm"
         mc:Ignorable="d"
-        Title="EditRoom" 
-        Height="172" 
+        Title="EditRoom"
+        Height="172"
         Width="400">
     <Window.Resources>
-        
+
         <Style TargetType="TextBlock">
-            <Setter Property="Height" Value="35"/>
-            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Height" Value="35" />
+            <Setter Property="Margin" Value="5" />
         </Style>
-        
     </Window.Resources>
-    
+
     <DockPanel>
-        
-        <Grid DockPanel.Dock="Bottom" 
+
+        <Grid DockPanel.Dock="Bottom"
               Height="40">
-            
+
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            
-            <Button Grid.Column="0" 
-                    Content="Сохранить" 
-                    Margin="5.5"/>
-            <Button Grid.Column="1" 
-                    Content="Выйти" 
-                    Margin="5.5"/>
-            
+
+            <Button Grid.Column="0"
+                    Content="Сохранить"
+                    Margin="5.5" />
+            <Button Grid.Column="1"
+                    Content="Выйти"
+                    Margin="5.5" />
         </Grid>
-        
-        <Grid DockPanel.Dock="Top" 
+
+        <Grid DockPanel.Dock="Top"
               Height="100">
-            
+
             <Grid.RowDefinitions>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
             </Grid.RowDefinitions>
-            
+
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="300*"/>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="300*" />
             </Grid.ColumnDefinitions>
-            
-            <TextBlock Text="Номер"/>
-           
+
+            <TextBlock Text="Номер" />
+
             <TextBlock Grid.Row="1"
-                       Text="Тип комнаты"/>
-            
-            <TextBlock Grid.Row="2" 
-                       Text="Цена комнаты"/>
-            
-            <TextBox Grid.Column="1" 
+                       Text="Тип комнаты" />
+
+            <TextBlock Grid.Row="2"
+                       Text="Цена комнаты" />
+
+            <TextBox Grid.Column="1"
                      Text="{Binding Number}" />
 
-            <ComboBox Grid.Column="1" 
-                      Grid.Row="1" 
-                      x:Name="cbRoomTypes" 
-                      SelectedItem="{Binding RoomType}" 
-                      DisplayMemberPath="Name"  
-                      d:ItemsSource="{d:SampleData ItemCount=2}"/>
+            <ComboBox Grid.Column="1"
+                      Grid.Row="1"
+                      x:Name="cbRoomTypes"
+                      SelectedItem="{Binding RoomType}"
+                      DisplayMemberPath="Name"
+                      d:ItemsSource="{d:SampleData ItemCount=2}" />
 
-            <TextBox Grid.Row="2" 
-                     Grid.Column="1" 
-                     Text="{Binding DayPrice}" 
+            <TextBox Grid.Row="2"
+                     Grid.Column="1"
+                     Text="{Binding DayPrice}"
                      TextChanged="TextBox_TextChanged_1" />
         </Grid>
     </DockPanel>

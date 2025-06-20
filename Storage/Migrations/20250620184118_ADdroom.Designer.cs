@@ -12,8 +12,8 @@ using Storage;
 namespace Storage.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20250419112338_Initial migration")]
-    partial class Initialmigration
+    [Migration("20250620184118_ADdroom")]
+    partial class ADdroom
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,7 +42,7 @@ namespace Storage.Migrations
                     b.Property<int>("GuestId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("RoomId")
+                    b.Property<int>("RoomId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -51,7 +51,7 @@ namespace Storage.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("CheckIn");
+                    b.ToTable("CheckIns");
                 });
 
             modelBuilder.Entity("DataModel.Directories.DocumentType", b =>
@@ -149,7 +149,7 @@ namespace Storage.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RoomType");
+                    b.ToTable("RoomTypes");
                 });
 
             modelBuilder.Entity("DataModel.Object.Room", b =>
@@ -229,11 +229,15 @@ namespace Storage.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DataModel.Object.Room", null)
+                    b.HasOne("DataModel.Object.Room", "Room")
                         .WithMany("CheckIns")
-                        .HasForeignKey("RoomId");
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Guest");
+
+                    b.Navigation("Room");
                 });
 
             modelBuilder.Entity("DataModel.Directories.Guest", b =>

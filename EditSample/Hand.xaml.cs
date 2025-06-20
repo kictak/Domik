@@ -1,24 +1,11 @@
 ﻿using EditSample.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace EditSample
 {
-
     public partial class Hand : Window
     {
-        Student student = new Student()
+        private Student student = new Student()
         {
             Age = 20,
             FirstName = "Петя",
@@ -26,7 +13,7 @@ namespace EditSample
             Id = 1,
         };
 
-        Group[] Groups =
+        private Group[] Groups =
             new Group[]
             {
                 new Group {
@@ -38,7 +25,6 @@ namespace EditSample
                     Name = "Пиб-31",
                 }
             };
-
 
         public Hand()
         {
@@ -63,7 +49,7 @@ namespace EditSample
             student.FirstName = tbFirstName.Text;
             student.LastName = tbLastName.Text;
 
-            student.Group = (Group) cbGroups.SelectedItem;
+            student.Group = (Group)cbGroups.SelectedItem;
         }
     }
 }

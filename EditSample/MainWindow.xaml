@@ -9,11 +9,11 @@
     <DockPanel>
         <Grid DockPanel.Dock="Bottom">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Button Content="Руч.ред." Click="Hand_Click"/> 
-            <Button Content="Биндинг" Grid.Column="1" Click="Binding_Click"/>
+            <Button Content="Руч.ред." Click="Hand_Click" />
+            <Button Content="Биндинг" Grid.Column="1" Click="Binding_Click" />
         </Grid>
     </DockPanel>
 </Window>

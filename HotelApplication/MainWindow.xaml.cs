@@ -1,16 +1,6 @@
-﻿using HotelApplication.Forms;
+﻿using HotelApplication.Forms.GuestForm;
 using HotelApplication.Forms.RoomForm;
-using HotelApplication.Forms.GuestForm;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace HotelApplication
 {
@@ -26,7 +16,6 @@ namespace HotelApplication
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void ShowRooms_Click(object sender, RoutedEventArgs e)
@@ -34,14 +23,12 @@ namespace HotelApplication
             RoomListForm roomListForm = new RoomListForm();
             roomListForm.ShowDialog();
         }
+
         private void ShowGuest_Click(object sender, RoutedEventArgs e)
         {
             GuestsListForm guestListForm = new GuestsListForm();
             guestListForm.ShowDialog();
         }
-
-        
-
 
         //private void Button_Click(object sender, RoutedEventArgs e)
         //{

@@ -14,18 +14,10 @@ namespace HotelApplication.Forms.GuestForm
             DataContext = new CurrentGuestListViewModel();
         }
 
-        //private void Window_Loaded(object sender, RoutedEventArgs e)
-        //{
-        //    using (var context = new MyDbContext())
-        //    {
-        //        var guest = context.Guests
-        //            .Include(r => r.Guests)
-        //            .ToArray();
-
-        //        dgGuests.ItemsSource = guest;
-        //    }
-        //}
+        private void EditGuest_Click(object sender, RoutedEventArgs e)
+        {
+            EditGuest editGuest = new EditGuest();
+            editGuest.Show();
+        }
     }
 }
-
-  

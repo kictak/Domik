@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Storage;
 
@@ -11,9 +12,11 @@ using Storage;
 namespace Storage.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250620174549_InitCheckInTable")]
+    partial class InitCheckInTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,7 +51,7 @@ namespace Storage.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("CheckIns");
+                    b.ToTable("CheckIn");
                 });
 
             modelBuilder.Entity("DataModel.Directories.DocumentType", b =>
@@ -146,7 +149,7 @@ namespace Storage.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RoomTypes");
+                    b.ToTable("RoomType");
                 });
 
             modelBuilder.Entity("DataModel.Object.Room", b =>
